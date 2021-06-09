@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="61.0" prefWidth="600.0">
+         <children>
+            <Label text="Dice Game">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="63.0" prefWidth="600.0">
+         <children>
+            <Label lineSpacing="1.0" prefHeight="55.0" prefWidth="545.0" text="Bet if the next roll is lower or higher. If you run out of money first, you lose. If the house runs out of money, you win (house will bet the same amount and opposite side. If the dice rolls the same, it will automatically re-roll). " textAlignment="CENTER" textOverrun="CLIP" wrapText="true" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="46.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="startBtn" alignment="CENTER" mnemonicParsing="false" onAction="#startGame" prefHeight="46.0" prefWidth="75.0" text="Start" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="590.0">
+         <children>
+            <Label text="Bet side:">
+               <HBox.margin>
+                  <Insets left="55.0" />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="betHigherBtn" disable="true" mnemonicParsing="false" onAction="#getHigherBet" text="Higher">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="betLowerBtn" disable="true" mnemonicParsing="false" onAction="#getLowerBet" text="Lower">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+            <HBox prefHeight="44.0" prefWidth="180.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label />
+                  <Label prefHeight="17.0" prefWidth="81.0" text="Your money:" />
+                  <Label fx:id="playersMoneyLbl" prefHeight="17.0" prefWidth="32.0" text="100" />
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="43.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="590.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="83.0" prefWidth="590.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="71.0" text="Bet amount:">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="50.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="betAmountInput" alignment="CENTER" disable="true" onAction="#getBetAmount" opacity="0.34" prefHeight="25.0" prefWidth="85.0" text="amount">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <HBox alignment="CENTER" prefHeight="43.0" prefWidth="185.0" />
+                        <HBox prefHeight="7.0" prefWidth="199.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="82.0" text="House money:" />
+                              <Label fx:id="housesMoneyLbl" prefHeight="17.0" prefWidth="31.0" text="100" />
+                           </children>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="45.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="590.0">
+               <children>
+                  <Button fx:id="rollDiceBtn" disable="true" mnemonicParsing="false" onAction="#rollDice" text="roll dice">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label fx:id="diceLbl" alignment="CENTER" contentDisplay="CENTER" prefHeight="43.0" prefWidth="49.0" text="Dice">
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="198.0" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="77.0" prefWidth="200.0">
+         <children>
+            <HBox prefHeight="77.0" prefWidth="120.0">
+               <children>
+                  <Label fx:id="winLoseLbl" visible="false">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></HBox>
+   </children>
+</VBox>
