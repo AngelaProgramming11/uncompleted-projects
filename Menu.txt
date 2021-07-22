@@ -1,0 +1,5 @@
+drink base:BasicMilkTea,BrownSugarMilkTea,GreenTeaMilkTea,PassionFruitTea,PeachTea,StrawberryMatchaTea
+ice:BasicMilkTeaIce,BrownSugarMilkTeaIce,GreenTeaMilkTeaIce,PassionFruitTeaIce,PeachTeaIce,StrawberryMatchaTeaIce
+tapioca:BasicMilkTeaTapioca,BrownSugarMilkTeaTapioca,GreenTeaMilkTeaTapioca,PassionFruitTeaTapioca,PeachTeaTapioca,StrawberryMatchaTeaTapioca
+toppings:HerbalJelly,RedBean,Fruit,PoppingBoba,MilkFoam
+straw:PinkStraw,BlueStraw,GreenStraw,YellowStraw
